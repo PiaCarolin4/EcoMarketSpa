@@ -42,7 +42,7 @@ public class OrderService {
         }
 
         // Validar existencia
-        if (!userClient.userExists(order.getUserId()) ||
+        /*if (!userClient.userExists(order.getUserId()) ||
                 !productClient.allProductsExist(order.getProductId())) {
             return Optional.empty();
         }
@@ -53,7 +53,7 @@ public class OrderService {
         // Ajustar inventario
         for (String productId : order.getProductId()) {
             inventoryClient.adjustStock(productId, 1); // descuenta 1 unidad
-        }
+        }*/
 
         orders.add(order);
         return Optional.of(order);
